@@ -1,3 +1,4 @@
+/*mixins*/
 * {
   color: #ee4746;
   font-family: "Josefin Sans", sans-serif;
@@ -116,11 +117,29 @@ p {
   margin-bottom: 0;
 }
 
+/*section 1 starter */
 #starter .promotion {
   text-align: center;
   background-color: #f4f4f4;
   margin: auto;
   padding: 10px;
+}
+#starter .prix-pokemon {
+  background-color: #f4f4f4;
+  position: absolute;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  z-index: 3;
+}
+#starter .prix-pokemon p:nth-of-type(2) {
+  font-size: 0.6em;
+}
+#starter .prix-pokemon .img-cart {
+  position: absolute;
+  bottom: -36px;
 }
 #starter .bg-pokemon {
   background-color: #f4f4f4;
@@ -128,13 +147,16 @@ p {
   padding: 0;
   position: relative;
 }
+#starter .bg-pokemon:hover .prix-pokemon {
+  opacity: 1;
+}
 #starter .bg-pokemon:hover .layout::before {
   opacity: 0.8;
 }
 #starter .bg-pokemon .layout {
   position: relative;
 }
-#starter .bg-pokemon:hover p {
+#starter .bg-pokemon:hover .titre-cart {
   background-color: #ee4746;
   color: white;
   z-index: 2;
@@ -155,6 +177,62 @@ p {
   text-transform: uppercase;
 }
 
+/*section 2 actualite */
+.container-perso {
+  max-width: 1205px;
+}
+
+#actualite h2 {
+  font-size: 1.6em;
+  font-weight: 300;
+}
+#actualite h2::after {
+  content: "";
+  background-color: #ee4746;
+  width: 100px;
+  height: 1px;
+  margin: auto;
+  display: block;
+}
+#actualite .row > div {
+  position: relative;
+  display: flex;
+}
+#actualite .titre-article {
+  background-color: #f4f4f4;
+  bottom: -45px;
+  position: absolute;
+  width: 235px;
+  font-size: 0.9em;
+}
+#actualite .titre-article p:nth-of-type(2) {
+  text-align: start;
+}
+#actualite .magicarpe {
+  bottom: 10px;
+}
+#actualite .magicarpe .titre-article {
+  bottom: -66px;
+}
+
+/*section 3 pokeball */
+#pokeball h2 {
+  font-size: 1.6em;
+  font-weight: 300;
+}
+#pokeball h2::after {
+  content: "";
+  background-color: #ee4746;
+  width: 100px;
+  height: 1px;
+  margin: auto;
+  display: block;
+}
+#pokeball .prix-ball {
+  font-size: 0.5em;
+  text-align: start;
+}
+
 @media (min-width: 768px) {
   footer > div:last-child div.col-md-6 {
     margin-top: 0px;
@@ -167,5 +245,25 @@ p {
   }
   #decouvrez .col {
     text-align: left;
+  }
+}
+@media (min-width: 420px) {
+  #actualite .row > div {
+    position: static;
+    display: flex;
+    flex-direction: column;
+  }
+  #actualite .row > div .titre-article {
+    position: static;
+    width: auto;
+    font-size: 1.1em;
+  }
+  #actualite .row > div .titre-article p:nth-of-type(2) {
+    text-align: center;
+  }
+  #pokeball .prix-ball {
+    text-align: center;
+    font-size: 0.9em;
+    padding-bottom: 15px;
   }
 }/*# sourceMappingURL=style.css.map */

@@ -5,6 +5,16 @@ $font-family_1: 'Josefin Sans', sans-serif;
 $background-color_1: #f4f4f4;
 $background-color_2: #ee4746;
 
+/*mixins*/
+@mixin dash-bar {
+  content: '';
+  background-color: $background-color_2;
+  width: 100px;
+  height: 1px;
+  margin: auto;
+  display: block;
+}
+
 * {
   color: $color_1;
   font-family: $font-family_1;
@@ -162,6 +172,8 @@ p {
   }
 }
 
+/*section 1 starter */
+
 #starter {
   .promotion {
     text-align: center;
@@ -170,11 +182,36 @@ p {
     padding: 10px;
   }
 
+  .prix-pokemon {
+    background-color: $background-color_1;
+    position: absolute;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    opacity: 0;
+    z-index: 3;
+
+
+    p:nth-of-type(2) {
+      font-size: 0.6em;
+    }
+
+    .img-cart {
+      position: absolute;
+      bottom: -36px;
+    }
+  }
+
   .bg-pokemon {
     background-color: $background-color_1;
     text-align: center;
     padding: 0;
     position: relative;
+
+    &:hover .prix-pokemon {
+      opacity: 1;
+    }
 
     &:hover .layout::before {
 
@@ -186,7 +223,7 @@ p {
       position: relative;
     }
 
-    &:hover p {
+    &:hover .titre-cart {
       background-color: $background-color_2;
       color: white;
       z-index: 2;
@@ -207,13 +244,73 @@ p {
     }
   }
 
-
-
   p {
     font-size: 0.9em;
     text-transform: uppercase;
   }
 }
+
+/*section 2 actualite */
+
+.container-perso {
+  max-width: 1205px;
+}
+
+#actualite {
+  h2 {
+    font-size: 1.6em;
+    font-weight: 300;
+
+    &::after {
+      @include dash-bar()
+    }
+  }
+
+  .row>div {
+    position: relative;
+    display: flex;
+  }
+
+  .titre-article {
+    background-color: $background-color_1;
+    bottom: -45px;
+    position: absolute;
+    width: 235px;
+    font-size: 0.9em;
+
+    p:nth-of-type(2) {
+      text-align: start;
+    }
+
+  }
+
+  .magicarpe {
+    bottom: 10px;
+
+    .titre-article {
+      bottom: -66px;
+    }
+  }
+}
+
+/*section 3 pokeball */
+
+#pokeball {
+  h2 {
+    font-size: 1.6em;
+    font-weight: 300;
+
+    &::after {
+      @include dash-bar();
+    }
+  }
+
+  .prix-ball {
+    font-size: 0.5em;
+    text-align: start;
+  }
+}
+
 
 
 
@@ -245,6 +342,37 @@ p {
   #decouvrez {
     .col {
       text-align: left;
+    }
+  }
+}
+
+
+@media (min-width: 420px) {
+  #actualite {
+    .row>div {
+      position: static;
+      display: flex;
+      flex-direction: column;
+
+
+      .titre-article {
+        position: static;
+        width: auto;
+        font-size: 1.1em;
+
+        p:nth-of-type(2) {
+          text-align: center;
+        }
+
+      }
+    }
+  }
+
+  #pokeball {
+    .prix-ball {
+      text-align: center;
+      font-size: 0.9em;
+      padding-bottom: 15px;
     }
   }
 
