@@ -1,0 +1,171 @@
+* {
+  color: #ee4746;
+  font-family: "Josefin Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header .navbar-brand img {
+  width: 100px;
+}
+header .nav-link {
+  color: #ee4746;
+}
+header .nav-link:after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 1px;
+  border: 0;
+  background: #ee4746;
+  margin: 0px auto;
+  transition: all 1s;
+}
+header .nav-link:hover:after {
+  width: 80%;
+}
+header .dropdown-item {
+  color: #ee4746;
+}
+header .navbar-light .navbar-nav .nav-link {
+  color: #ee4746;
+  text-transform: uppercase;
+}
+header .navbar-light .navbar-nav .nav-link:focus {
+  color: #ee4746;
+  text-transform: uppercase;
+}
+header .navbar-light .navbar-nav .nav-link:hover {
+  color: #ee4746;
+  text-transform: uppercase;
+}
+header .navbar-light .navbar-nav .active > .nav-link {
+  color: #ee4746;
+  text-transform: uppercase;
+}
+header .navbar-light .navbar-nav .nav-link.active {
+  color: #ee4746;
+  text-transform: uppercase;
+}
+header .navbar-light .navbar-nav .nav-link.show {
+  color: #ee4746;
+  text-transform: uppercase;
+}
+header .navbar-light .navbar-nav .show > .nav-link {
+  color: #ee4746;
+  text-transform: uppercase;
+}
+
+footer h2 {
+  text-transform: uppercase;
+  font-weight: normal;
+  font-size: 1.5em;
+}
+footer h2:after {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 1px;
+  background: #ee4746;
+  margin: 20px auto;
+}
+footer > div {
+  padding: 50px 0;
+}
+footer > div:first-child {
+  background-color: #f4f4f4;
+  padding-bottom: 40px;
+  text-align: center;
+}
+footer > div:last-child {
+  background-color: #ee4746;
+  padding-bottom: 40px;
+}
+footer > div:last-child * {
+  color: #FFF;
+}
+footer > div:last-child div.col-md-6 {
+  margin-top: 20px;
+}
+footer > div:last-child ul {
+  margin: 20px 0;
+  padding: 0;
+}
+footer > div:last-child ul li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  font-size: 0.8em;
+}
+
+/* Exo a partir d'ici*/
+/* HERO */
+p {
+  margin: 0;
+}
+
+#hero {
+  background-image: url(../img/header.jpg);
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+}
+#hero h1 {
+  margin-bottom: 0;
+}
+
+#starter .promotion {
+  text-align: center;
+  background-color: #f4f4f4;
+  margin: auto;
+  padding: 10px;
+}
+#starter .bg-pokemon {
+  background-color: #f4f4f4;
+  text-align: center;
+  padding: 0;
+  position: relative;
+}
+#starter .bg-pokemon:hover .layout::before {
+  opacity: 0.8;
+}
+#starter .bg-pokemon .layout {
+  position: relative;
+}
+#starter .bg-pokemon:hover p {
+  background-color: #ee4746;
+  color: white;
+  z-index: 2;
+}
+#starter .bg-pokemon .layout::before {
+  background-color: #ee4746;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  content: "";
+  opacity: 0;
+  z-index: 1;
+}
+#starter p {
+  font-size: 0.9em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px) {
+  footer > div:last-child div.col-md-6 {
+    margin-top: 0px;
+    padding-left: 100px;
+  }
+}
+@media (min-width: 576px) {
+  footer > div:last-child ul {
+    margin: 0;
+  }
+  #decouvrez .col {
+    text-align: left;
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,251 @@
+@use 'sass:color';
+$color_1: #ee4746;
+$color_2: #FFF;
+$font-family_1: 'Josefin Sans', sans-serif;
+$background-color_1: #f4f4f4;
+$background-color_2: #ee4746;
+
+* {
+  color: $color_1;
+  font-family: $font-family_1;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  .navbar-brand {
+    img {
+      width: 100px;
+    }
+  }
+
+  .nav-link {
+    color: $color_1;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 0%;
+      height: 1px;
+      border: 0;
+      background: #ee4746;
+      margin: 0px auto;
+      transition: all 1s;
+    }
+
+    &:hover {
+      &:after {
+        width: 80%;
+      }
+    }
+  }
+
+  .dropdown-item {
+    color: $color_1;
+  }
+
+  .navbar-light {
+    .navbar-nav {
+      .nav-link {
+        color: $color_1;
+        text-transform: uppercase;
+
+        &:focus {
+          color: $color_1;
+          text-transform: uppercase;
+        }
+
+        &:hover {
+          color: $color_1;
+          text-transform: uppercase;
+        }
+      }
+
+      .active {
+        >.nav-link {
+          color: $color_1;
+          text-transform: uppercase;
+        }
+      }
+
+      .nav-link.active {
+        color: $color_1;
+        text-transform: uppercase;
+      }
+
+      .nav-link.show {
+        color: $color_1;
+        text-transform: uppercase;
+      }
+
+      .show {
+        >.nav-link {
+          color: $color_1;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  h2 {
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 1.5em;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 100px;
+      height: 1px;
+      background: #ee4746;
+      margin: 20px auto;
+    }
+  }
+
+  >div {
+    padding: 50px 0;
+
+    &:first-child {
+      background-color: $background-color_1;
+      padding-bottom: 40px;
+      text-align: center;
+    }
+
+    &:last-child {
+      background-color: $background-color_2;
+      padding-bottom: 40px;
+
+      * {
+        color: $color_2;
+      }
+
+      div.col-md-6 {
+        margin-top: 20px;
+      }
+
+      ul {
+        margin: 20px 0;
+        padding: 0;
+
+        li {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          font-size: 0.8em;
+        }
+      }
+    }
+  }
+
+}
+
+
+/* Exo a partir d'ici*/
+
+/* HERO */
+p {
+  margin: 0;
+}
+
+#hero {
+  background-image: url(../img/header.jpg);
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+
+  h1 {
+    margin-bottom: 0;
+  }
+}
+
+#starter {
+  .promotion {
+    text-align: center;
+    background-color: $background-color_1;
+    margin: auto;
+    padding: 10px;
+  }
+
+  .bg-pokemon {
+    background-color: $background-color_1;
+    text-align: center;
+    padding: 0;
+    position: relative;
+
+    &:hover .layout::before {
+
+      opacity: 0.8;
+
+    }
+
+    .layout {
+      position: relative;
+    }
+
+    &:hover p {
+      background-color: $background-color_2;
+      color: white;
+      z-index: 2;
+    }
+
+    .layout::before {
+
+      background-color: $background-color_2;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      content: '';
+      opacity: 0;
+      z-index: 1;
+
+    }
+  }
+
+
+
+  p {
+    font-size: 0.9em;
+    text-transform: uppercase;
+  }
+}
+
+
+
+
+@media (min-width: 768px) {
+  footer {
+    >div {
+      &:last-child {
+        div.col-md-6 {
+          margin-top: 0px;
+          padding-left: 100px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 576px) {
+  footer {
+    >div {
+      &:last-child {
+        ul {
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  #decouvrez {
+    .col {
+      text-align: left;
+    }
+  }
+
+}
