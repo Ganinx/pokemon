@@ -6,6 +6,7 @@
   padding: 0;
 }
 
+/* header */
 header .navbar-brand img {
   width: 100px;
 }
@@ -57,10 +58,156 @@ header .navbar-light .navbar-nav .show > .nav-link {
   text-transform: uppercase;
 }
 
+/* Exo a partir d'ici*/
+/* HERO */
+p {
+  margin: 0;
+}
+
+#hero {
+  background-image: url(../img/header.jpg);
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  background-position: center;
+  background-size: cover;
+}
+#hero h1 {
+  margin-bottom: 0;
+}
+
+/*section 1 starter */
+#starter .promotion {
+  text-align: center;
+  background-color: #f4f4f4;
+  margin: auto;
+  padding: 10px;
+  font-weight: 800;
+}
+#starter .bg-pokemon {
+  text-align: center;
+  position: relative;
+}
+#starter .bg-pokemon:hover .prix-pokemon {
+  opacity: 1;
+  transition: all 0.5s;
+}
+#starter .bg-pokemon:hover .layout::before {
+  opacity: 0.8;
+  transition: all 0.5s;
+}
+#starter .bg-pokemon .prix-pokemon {
+  background-color: #f4f4f4;
+  position: absolute;
+  padding: 33px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  opacity: 0;
+  z-index: 3;
+  transition: all 0.5s;
+  font-size: 1.4em;
+}
+#starter .bg-pokemon .prix-pokemon strong {
+  text-transform: none;
+}
+#starter .bg-pokemon .prix-pokemon p:nth-of-type(2) {
+  font-size: 0.6rem;
+}
+#starter .bg-pokemon .prix-pokemon .img-cart {
+  position: absolute;
+  bottom: -36px;
+}
+#starter .bg-pokemon .layout {
+  position: relative;
+}
+#starter .bg-pokemon:hover .titre-cart {
+  background-color: #ee4746;
+  color: white;
+  z-index: 2;
+  transition: all 0.5s;
+}
+#starter .bg-pokemon .titre-cart {
+  font-weight: 600;
+  font-size: 1.1em;
+}
+#starter .bg-pokemon .layout::before {
+  background-color: #ee4746;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  content: "";
+  opacity: 0;
+  z-index: 1;
+  transition: all 0.5s;
+}
+#starter p {
+  font-size: 0.9em;
+  text-transform: uppercase;
+  background-color: #f4f4f4;
+  transition: all 0.5s;
+}
+
+/*section 2 actualite */
+#actualite h2 {
+  font-size: 2em;
+  font-weight: 300;
+}
+#actualite h2::after {
+  content: "";
+  background-color: #ee4746;
+  width: 100px;
+  height: 1px;
+  margin: auto;
+  display: block;
+}
+#actualite .row > div {
+  position: relative;
+  display: flex;
+}
+#actualite .titre-article {
+  background-color: #f4f4f4;
+  bottom: -45px;
+  position: absolute;
+  width: 235px;
+  font-size: 0.9em;
+}
+#actualite .titre-article p:nth-of-type(2) {
+  text-align: start;
+}
+#actualite .magicarpe {
+  bottom: 10px;
+}
+#actualite .magicarpe .titre-article {
+  bottom: -66px;
+}
+
+/*section 3 pokeball */
+#pokeball h2 {
+  font-size: 2em;
+  font-weight: 300;
+}
+#pokeball h2::after {
+  content: "";
+  background-color: #ee4746;
+  width: 100px;
+  height: 1px;
+  margin: auto;
+  display: block;
+}
+#pokeball .prix-ball {
+  font-size: 0.8em;
+  text-align: start;
+  font-weight: 600;
+}
+
+/*footer */
 footer h2 {
   text-transform: uppercase;
   font-weight: normal;
-  font-size: 1.5em;
+  font-size: 2em;
 }
 footer h2:after {
   content: "";
@@ -99,140 +246,6 @@ footer > div:last-child ul li {
   font-size: 0.8em;
 }
 
-/* Exo a partir d'ici*/
-/* HERO */
-p {
-  margin: 0;
-}
-
-#hero {
-  background-image: url(../img/header.jpg);
-  padding: 100px;
-  display: flex;
-  justify-content: center;
-  background-position: center;
-  background-size: cover;
-}
-#hero h1 {
-  margin-bottom: 0;
-}
-
-/*section 1 starter */
-#starter .promotion {
-  text-align: center;
-  background-color: #f4f4f4;
-  margin: auto;
-  padding: 10px;
-}
-#starter .prix-pokemon {
-  background-color: #f4f4f4;
-  position: absolute;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  opacity: 0;
-  z-index: 3;
-}
-#starter .prix-pokemon p:nth-of-type(2) {
-  font-size: 0.6em;
-}
-#starter .prix-pokemon .img-cart {
-  position: absolute;
-  bottom: -36px;
-}
-#starter .bg-pokemon {
-  background-color: #f4f4f4;
-  text-align: center;
-  padding: 0;
-  position: relative;
-}
-#starter .bg-pokemon:hover .prix-pokemon {
-  opacity: 1;
-}
-#starter .bg-pokemon:hover .layout::before {
-  opacity: 0.8;
-}
-#starter .bg-pokemon .layout {
-  position: relative;
-}
-#starter .bg-pokemon:hover .titre-cart {
-  background-color: #ee4746;
-  color: white;
-  z-index: 2;
-}
-#starter .bg-pokemon .layout::before {
-  background-color: #ee4746;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  content: "";
-  opacity: 0;
-  z-index: 1;
-}
-#starter p {
-  font-size: 0.9em;
-  text-transform: uppercase;
-}
-
-/*section 2 actualite */
-.container-perso {
-  max-width: 1205px;
-}
-
-#actualite h2 {
-  font-size: 1.6em;
-  font-weight: 300;
-}
-#actualite h2::after {
-  content: "";
-  background-color: #ee4746;
-  width: 100px;
-  height: 1px;
-  margin: auto;
-  display: block;
-}
-#actualite .row > div {
-  position: relative;
-  display: flex;
-}
-#actualite .titre-article {
-  background-color: #f4f4f4;
-  bottom: -45px;
-  position: absolute;
-  width: 235px;
-  font-size: 0.9em;
-}
-#actualite .titre-article p:nth-of-type(2) {
-  text-align: start;
-}
-#actualite .magicarpe {
-  bottom: 10px;
-}
-#actualite .magicarpe .titre-article {
-  bottom: -66px;
-}
-
-/*section 3 pokeball */
-#pokeball h2 {
-  font-size: 1.6em;
-  font-weight: 300;
-}
-#pokeball h2::after {
-  content: "";
-  background-color: #ee4746;
-  width: 100px;
-  height: 1px;
-  margin: auto;
-  display: block;
-}
-#pokeball .prix-ball {
-  font-size: 0.5em;
-  text-align: start;
-}
-
 @media (min-width: 768px) {
   footer > div:last-child div.col-md-6 {
     margin-top: 0px;
@@ -247,7 +260,7 @@ p {
     text-align: left;
   }
 }
-@media (min-width: 420px) {
+@media (min-width: 420px) and (max-width: 992px) {
   #actualite .row > div {
     position: static;
     display: flex;
@@ -263,7 +276,6 @@ p {
   }
   #pokeball .prix-ball {
     text-align: center;
-    font-size: 0.9em;
     padding-bottom: 15px;
   }
 }/*# sourceMappingURL=style.css.map */
